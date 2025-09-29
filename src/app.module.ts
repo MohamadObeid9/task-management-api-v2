@@ -5,6 +5,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import databaseConfig from './config/database.config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { envValidationSchema } from './config/env.validation';
+import { TaskModule } from './modules/task/task.module';
+import { UsersModule } from './modules/users/users.module';
 
 @Module({
   imports: [
@@ -32,6 +34,8 @@ import { envValidationSchema } from './config/env.validation';
         return config!;
       },
     }),
+    TaskModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,6 +1,6 @@
 import { registerAs } from '@nestjs/config';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { EnvironmentVariables } from './env.validation';
+import { EnvironmentVariables } from 'src/types';
 
 /**
  * Database Configuration Factory
